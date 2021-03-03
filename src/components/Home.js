@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
+import Link from "@material-ui/core/Link";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -9,7 +9,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import meals from "./mealsData.json";
+import {meals} from "./mealsData";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -78,7 +78,7 @@ export default function Home() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image src={meal.img.src}
+                    image={meal.img}
                     height="450"
                   />
                   <CardContent className={classes.cardContent}>
@@ -88,9 +88,14 @@ export default function Home() {
                     <Typography>{meal.description}</Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Recipes
-                    </Button>
+                    <Link
+                      variant="button"
+                      color="textPrimary"
+                      href={meal.link}
+                      className={classes.link}
+                    >
+                     Recipes
+                    </Link>
                   </CardActions>
                 </Card>
               </Grid>

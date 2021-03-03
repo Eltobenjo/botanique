@@ -7,19 +7,20 @@ import Breakfast from './components/Breakfast'
 import Lunch from "./components/Lunch";
 import Dinner from "./components/Dinner";
 import Dessert from "./components/Dessert";
-import { client } from "./components/Client";
+import Soups from "./components/Soups";
+import Snacks from "./components/Snacks";
 import { Switch, Route } from "react-router-dom";
+import { client } from "./components/Client";
 
 function App() {
-const [recipes, setRecipes] = useState([]);
+ const [recipes, setRecipes] = useState([]);
 
-useEffect(() => {
-  client.getEntries().then((entries) => {
-    setRecipes(entries.items);
-    console.log(entries);
-  });
-}, []);
-
+ useEffect(() => {
+   client.getEntries().then((entries) => {
+     setRecipes(entries.items);
+     console.log(entries);
+   });
+ }, []);
 
 
 
@@ -31,7 +32,7 @@ useEffect(() => {
           <Home />
         </Route>
 
-        <Route path="/breakast">
+        <Route path="/breakfast">
           <Breakfast recipes={recipes} />
         </Route>
 
@@ -44,9 +45,13 @@ useEffect(() => {
         <Route path="/dessert">
           <Dessert recipes={recipes} />
         </Route>
+        <Route path="/soups">
+          <Soups recipes={recipes} />
+        </Route>
+        <Route path="/snacks">
+          <Snacks recipes={recipes} />
+        </Route>
       </Switch>
-
-      
 
       <Footer />
     </div>
