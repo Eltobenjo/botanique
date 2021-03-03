@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "title": "Breakfast",
+    "img": { "src": "./images/breakfast.jpg", "alt": "breakfast" },
+    "description": "a healthy start to the day"
+  },
+  {
+    "id": "2",
+    "title": "Lunch",
+    "img": { "src": "./images/lunch.jpg", "alt": "lunch" },
+    "description": "Lunch"
+  },
+  {
+    "id": "3",
+    "title": "Dinner",
+
+    "img": { "src": "./images/dinner.png", "alt": "breakfast" },
+
+    "description": "Dinner"
+  },
+  {
+    "id": "4",
+    "title": "Dessert",
+
+    "img": { "src": "./images/dessert.png", "alt": "dessert" },
+    "description": "sweet"
+  }
+]
