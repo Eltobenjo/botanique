@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
-import Header from './components/Header'
+import Navbar from './components/Navbar'
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Breakfast from './components/Breakfast'
@@ -9,6 +9,10 @@ import Dinner from "./components/Dinner";
 import Dessert from "./components/Dessert";
 import Soups from "./components/Soups";
 import Snacks from "./components/Snacks";
+import GoVegan from "./components/GoVegan";
+import SignIn from './components/SignIn'
+import SignUp from './components/SignUp' 
+
 import { Switch, Route } from "react-router-dom";
 import { client } from "./components/Client";
 
@@ -26,7 +30,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Navbar />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -50,6 +54,15 @@ function App() {
         </Route>
         <Route path="/snacks">
           <Snacks recipes={recipes} />
+        </Route>
+        <Route path="/govegan">
+          <GoVegan />
+        </Route>
+        <Route path="/signin">
+          <SignIn />
+        </Route>
+        <Route path="/signup">
+          <SignUp />
         </Route>
       </Switch>
 

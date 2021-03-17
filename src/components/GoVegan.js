@@ -9,7 +9,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import {meals} from "../data/mealsData";
+import { swaps } from "../data/swapsData.js";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -19,14 +19,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 6),
   },
-selectors: {
-flexWrap:'noWrap !important',
-display:'flex',
-},
+  selectors: {
+    flexWrap: "noWrap !important",
+    display: "flex",
+  },
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
-    
   },
   card: {
     height: "100%",
@@ -39,7 +38,7 @@ display:'flex',
   },
 }));
 
-export default function Home() {
+export default function GoVegan() {
   const classes = useStyles();
 
   return (
@@ -56,7 +55,7 @@ export default function Home() {
             color="textPrimary"
             gutterBottom
           >
-            Our Vegan Recipes
+            Why Go Vegan ?
           </Typography>
           <Typography
             variant="h5"
@@ -64,7 +63,21 @@ export default function Home() {
             color="textSecondary"
             paragraph
           >
-            Choose from our delicious vegan recipes.
+            Adopting a plant-based diet is the best way to help animals, the
+            planet and your health. Not only will you be sparing animals from
+            suffering, you will be doing your bit to help reduce our impact on
+            the planet. And with such a huge boost in the availability of
+            plant-based options, it is no surprise that more and more people are
+            choosing to ditch animal products. There really is no downside!
+          </Typography>
+          <Typography
+            component="h1"
+            variant="32"
+            align="center"
+            color="textPrimary"
+            gutterBottom
+          >
+            Try some vegan alternatives 
           </Typography>
         </Container>
       </div>
@@ -73,28 +86,28 @@ export default function Home() {
           {/* End hero unit */}
 
           <Grid container spacing={1}>
-            {meals.map((meal) => (
-              <Grid item key={meal.id} xs={12} sm={6} md={4}>
+            {swaps.map((swap) => (
+              <Grid item key={swap.id} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image={meal.img}
+                    image={swap.img}
                     height="450"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      {meal.title}
+                      {swap.title}
                     </Typography>
-                    <Typography>{meal.description}</Typography>
+                    <Typography>{swap.description}</Typography>
                   </CardContent>
                   <CardActions>
                     <Link
                       variant="button"
                       color="textPrimary"
-                      href={meal.link}
+                      href={swap.link}
                       className={classes.link}
                     >
-                     Recipes
+                      Explore
                     </Link>
                   </CardActions>
                 </Card>

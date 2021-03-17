@@ -6,7 +6,6 @@ import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
 
-
 const useStyles = makeStyles((theme) => ({
   "@global": {
     ul: {
@@ -18,10 +17,9 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
     position: "fixed",
-    height:'4rem',
-    flexWrap:'wrap',
-    alignContent:'flexEnd',
-   
+    height: "4rem",
+    flexWrap: "wrap",
+    alignContent: "flexEnd",
   },
   toolbar: {
     flexWrap: "wrap",
@@ -31,13 +29,10 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     margin: theme.spacing(1, 1.5),
-    
   },
- 
-
 }));
 
-export default function Header() {
+export default function Navbar() {
   const classes = useStyles();
 
   return (
@@ -47,16 +42,18 @@ export default function Header() {
         position="fixed"
         color="default"
         elevation={0}
-        className={classes.appBar} >
-         <Toolbar className={classes.toolbar}>
-          <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-            Company name
+        className={classes.appBar}
+      >
+        <Toolbar className={classes.toolbar}>
+          <Typography
+            variant="h6"
+            color="inherit"
+            noWrap
+            className={classes.toolbarTitle}
+          >
+            eltoBenjo
           </Typography>
-               
-       
 
-          
-       
           <nav>
             <Link
               variant="button"
@@ -74,29 +71,30 @@ export default function Header() {
             >
               Recipes
             </Link>
+
             <Link
               variant="button"
               color="textPrimary"
-              href="/#"
+              href="/govegan"
               className={classes.link}
             >
-              Link2
+              Go Vegan
             </Link>
             <Link
               variant="button"
               color="textPrimary"
-              href="/#"
+              href="/signin"
               className={classes.link}
             >
-              Link3
+              Sign IN
             </Link>
             <Link
               variant="button"
               color="textPrimary"
-              href="/#"
+              href="/signup"
               className={classes.link}
             >
-              Link4
+              Sign Up
             </Link>
           </nav>
         </Toolbar>

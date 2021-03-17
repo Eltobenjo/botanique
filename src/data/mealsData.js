@@ -1,9 +1,9 @@
-import breakfast from "./images/breakfast.jpg";
-import lunch from "./images/lunch.jpg";
-import dinner from "./images/dinner.png";
-import dessert from "./images/dessert.png";
-import soups from "./images/soups.jpg";
-import snacks from "./images/snacks.jpg";
+import breakfast from "../images/breakfast.jpg";
+import lunch from "../images/lunch.jpg";
+import dinner from "../images/dinner.png";
+import dessert from "../images/dessert.png";
+import soups from "../images/soups.jpg";
+import snacks from "../images/snacks.jpg";
 
 
 export const meals = [
